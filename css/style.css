@@ -28,7 +28,7 @@ body {
   position: relative;
   width: 1440px;
   max-width: 95%;
-  height: 600px;
+  min-height: 600px;
   margin: 30px auto;
   background-color: #efefef;
   overflow: hidden;
@@ -36,7 +36,7 @@ body {
 
 #container .content {
   position: relative;
-  display: flex;
+  display: block;
   width: 1180px;
   max-width: 95%;
   height: 100%;
@@ -45,8 +45,18 @@ body {
 }
 
 #container .content .content-text {
-  width: 45%;
+  min-width: 45%;
 }
+
+@media screen and (min-width: 680px) {
+  #container .content .content-text {
+    width: 45%;
+  }
+  #container .content .content-img {
+    width: 55%;
+  }
+}
+
 #container .content .content-text:after {
   content: "";
   display: block;
@@ -63,7 +73,7 @@ body {
 }
 
 #container .content .content-img {
-  width: 55%;
+  min-width: 55%;
   -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
   align-self: flex-end;
@@ -189,18 +199,33 @@ body {
 }
 
 #container .content .content-img-about {
-  width: 45%;
+  min-width: 45%;
 }
 #container .content .content-img-about img {
-  width: 85%;
+  min-width: 85%;
+  /* height: 500px; */
 }
 
 #container .content .content-text-about {
-  width: 55%;
+  min-width: 55%;
+}
+
+@media screen and (min-width: 680px) {
+  #container .content .content-img-about {
+    width: 45%;
+  }
+  #container .content .content-img-about img {
+    width: 35%;
+    /* height: 500px; */
+  }
+
+  #container .content .content-text-about {
+    width: 55%;
+  }
 }
 
 #container .content .content-text-about h2 {
-  margin-top: 0;
+  margin-top: 10px;
   margin-bottom: 30px;
   font-size: 42px;
   font-family: "Raleway", Helvetica, sans-serif;
@@ -244,12 +269,29 @@ body {
 #container .content .content-text-about .social i:hover {
   background-color: #020202;
 }
+.social-ex {
+  /* display: flex; */
+  /* width: 180px; */
+  justify-content: space-between;
+  color: #fff;
+  text-decoration: none;
+  /* display: block; */
+  font-size: 16px;
+  text-align: center;
+  /* line-height: 30px; */
+  background-color: #909090;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+}
+.social-ex:hover {
+  background-color: #020202;
+}
 
 #slide {
-  position: relative;
+  /* position: relative; */
   width: 1440px;
   max-width: 95%;
-  height: 600px;
+  min-height: 600px;
   margin: 30px auto;
   background-color: #efefef;
   overflow: hidden;
@@ -265,9 +307,21 @@ body {
   align-items: center;
 }
 
+#slide .content-text {
+  margin: 17px;
+  font-size: 42px;
+  font-family: "Raleway", Helvetica, sans-serif;
+  font-weight: 100;
+  align-items: center;
+}
+#slide .content-text p{
+  font-size: 20px;
+  font-weight: 500;
+}
+
 #slide .content .slider {
   position: relative;
-  width: calc(100% - 60px);
+  min-width: calc(100% - 60px);
   height: 100%;
   margin: 0 auto;
   padding: 0;
