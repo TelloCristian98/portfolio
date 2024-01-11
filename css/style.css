@@ -269,6 +269,29 @@ body {
 #container .content .content-text-about .social i:hover {
   background-color: #020202;
 }
+#container .content-contact .social {
+  display: flex;
+  width: 180px;
+  justify-content: space-between;
+}
+#container .content-contact .social a {
+  color: #fff;
+  text-decoration: none;
+}
+#container .content-contact .social i {
+  display: block;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 30px;
+  background-color: #909090;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+}
+#container .content-contact .social i:hover {
+  background-color: #020202;
+}
 .social-ex {
   /* display: flex; */
   /* width: 180px; */
@@ -314,7 +337,7 @@ body {
   font-weight: 100;
   align-items: center;
 }
-#slide .content-text p{
+#slide .content-text p {
   font-size: 20px;
   font-weight: 500;
 }
